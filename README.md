@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BuildVision Homepage
+
+A marketing homepage for BuildVision built with Next.js 15, featuring an AutoCAD-inspired desktop metaphor.
+
+## Features
+
+- **CAD Workstation Aesthetic**: Blueprint grid backgrounds, window chrome, command line interface
+- **Interactive Tool Icons**: Wireframe SVG icons with hover effects and detail panels
+- **Responsive Design**: Desktop metaphor on large screens, card grid on mobile
+- **Smooth Animations**: Framer Motion powered interactions and transitions
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React + Custom SVG wireframe icons
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+├── app/
+│   ├── globals.css      # Global styles and CAD theme
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Main homepage
+├── components/
+│   ├── icons/
+│   │   └── ToolIcons.tsx    # Wireframe SVG icons
+│   ├── CommandLine.tsx      # Bottom command bar
+│   ├── CTA.tsx              # Call to action section
+│   ├── Desktop.tsx          # Desktop metaphor wrapper
+│   ├── DetailPanel.tsx      # Sliding tool detail panel
+│   ├── FiveAuthorities.tsx  # Ontology section
+│   ├── Footer.tsx           # Site footer
+│   ├── Hero.tsx             # Hero section
+│   ├── HowItWorks.tsx       # Workflow section
+│   ├── Integration.tsx      # Hub-and-spoke diagram
+│   ├── MenuBar.tsx          # CAD-style menu bar
+│   ├── SocialProof.tsx      # Testimonials and metrics
+│   ├── ToolGrid.tsx         # Tools grid layout
+│   ├── ToolIcon.tsx         # Individual tool icon
+│   └── WhoItsFor.tsx        # Persona section
+└── lib/
+    └── tools-data.ts        # Tool definitions and categories
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Brand Colors
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Primary Blue: `#4A3AFF`
+- Dark Background: `#06042E`
+- Category Colors:
+  - AI/Automation: Purple (`#A78BFA`)
+  - Engineering: Cyan (`#22D3EE`)
+  - Workflow: Green (`#4ADE80`)
+  - Analytics: Blue (`#60A5FA`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private - BuildVision, Inc.
