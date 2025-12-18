@@ -42,24 +42,12 @@ const categoryConfig = {
 };
 
 export const Header: React.FC<HeaderProps> = ({ onNavClick, onToolSelect, onOpenAuth }) => {
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/098c92ed-a44b-4fe3-bd76-b15f37e46396',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'components/desktop/Header.tsx:44',message:'Header component render',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'E'})}).catch(()=>{});
-  // #endregion
-  
   const [isProductOSOpen, setIsProductOSOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
   
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/098c92ed-a44b-4fe3-bd76-b15f37e46396',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'components/desktop/Header.tsx:52',message:'Before useAuth hook',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'E'})}).catch(()=>{});
-  // #endregion
-  
   const { user, isAuthenticated, signOut } = useAuth();
-  
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/098c92ed-a44b-4fe3-bd76-b15f37e46396',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'components/desktop/Header.tsx:56',message:'After useAuth hook',data:{isAuthenticated},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'E'})}).catch(()=>{});
-  // #endregion
 
   // Close dropdowns when clicking outside
   useEffect(() => {
